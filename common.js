@@ -1,7 +1,7 @@
 function loadLanguage(){
 var defaultLanguage = 'ua';   
 var language = localStorage.getItem('language') || defaultLanguage;
-    var $radio = document.querySelectorAll('#languages input[data-language="' + language + '"]');
+    var $radio = document.querySelectorAll('#languages input[data-language="' + language + '"]')[0];
     $radio.checked = true;
 updateText(language);
 }
@@ -13,7 +13,7 @@ updateText(language);
 
 function updateText(language){
     document.body.setAttribute('data-current-language',language);
- 
+    
     
 }
 
@@ -31,5 +31,6 @@ var language = document.querySelector('#languages input:checked').getAttribute('
 saveLanguage(language);
 })
 addEventListener('load', loadLanguage);
+
 
 
