@@ -13,8 +13,6 @@ updateText(language);
 
 function updateText(language){
     document.body.setAttribute('data-current-language',language);
-    
-    
 }
 
 document.querySelectorAll('#languages input[type="radio"]').forEach(function($radio){
